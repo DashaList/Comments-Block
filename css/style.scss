@@ -1,0 +1,183 @@
+@import "reset.scss";
+@import "formStyle.scss";
+
+/* roboto-300 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/roboto-v30-cyrillic_latin-300.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-cyrillic_latin-300.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-cyrillic_latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v30-cyrillic_latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-cyrillic_latin-500.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-cyrillic_latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Roboto';
+    font-weight: 400;
+    background: #edeef0;
+}
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.block {
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px #dce1e6;
+}
+
+.comments {
+
+    &__name-date-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__name-wrap {
+        width: 50%;
+    }
+
+    input[name=name] {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    input[name=name].error {
+        border: 1px solid red;
+    }
+    .name-error {
+        display: block;
+        color: red;
+    }
+
+    &__text-wrap {
+        margin-bottom: 10px;
+    }
+
+    .commentText {
+        position: relative;
+    }
+    .placeholder {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: rgb(129, 140, 153);
+    }
+    .commentText.error {
+        border: 1px solid red;
+    }
+    .text-error {
+        display: block;
+        color: red;
+    }
+}
+
+
+.comments__field {
+    display: none;
+}
+
+
+.comment {
+    margin-bottom: 20px;
+
+    &__delete {
+        width: 20px;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 10px;
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #4770ff;
+        margin-right: 15px;
+    }
+    
+    &__head-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    &__date {
+        color: rgb(129, 140, 153);
+    }
+
+    &__text {        
+        margin-bottom: 15px;
+    }
+
+    &__like {
+        width: 20px;
+        height: 20px;
+        background: url(../img/heart-light.svg) no-repeat center;
+        background-size: 20px auto;
+    }
+    &__like.active {
+        background: url(../img/heart-dark.svg) no-repeat center;
+        background-size: 20px auto;   
+    }
+}
+.comment:last-of-type {
+    margin-bottom: 0;
+}
+
+.hidden-div {
+    display: hidden;
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    word-wrap: break-word;
+
+    border: 1px solid rg rgba(197, 208, 219, 0%);
+    border-radius: 6px;
+}
+.no-scroll {
+    overflow: hidden;
+}
